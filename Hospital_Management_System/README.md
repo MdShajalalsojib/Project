@@ -147,3 +147,4 @@ hospital-management/
 # ⭐ If you like this project
 
 Give it a ⭐ on GitHub!
+[![Netlify Status](https://api.netlify.com/api/v1/badges/af9c9903-18d9-484d-bb80-3cddb3ebf0ff/deploy-status)](https://app.netlify.com/projects/hospital-management-system088/deploys)
