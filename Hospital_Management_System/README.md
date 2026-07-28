@@ -139,6 +139,8 @@ hospital-management/
 # 👨‍💻 Author
 
 **Md. Shajalal**
+## Department of 
+- Computer Science Engineering
 
 ---
 
