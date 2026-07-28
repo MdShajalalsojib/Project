@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Appointments - MediCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/appointment.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Medi<span>Care</span></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patient.html">Patients</a></li>
+      <li><a href="doctor.html">Doctors</a></li>
+      <li><a href="appointment.html" class="active">Appointments</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<section class="form-section">
+  <h2>Book Appointment</h2>
+  <form id="appointmentForm">
+    <input type="hidden" id="apptId">
+    <div class="form-grid">
+      <input type="text" id="apPatient" placeholder="Patient Name" required>
+      <select id="apDoctor" required>
+        <option value="">Select Doctor</option>
+      </select>
+      <input type="text" id="apDept" placeholder="Department" readonly>
+      <input type="date" id="apDate" required>
+      <input type="time" id="apTime" required>
+      <textarea id="apProblem" placeholder="Problem Description" required></textarea>
+    </div>
+    <button type="submit" class="btn-primary">Book Appointment</button>
+    <button type="button" id="resetApptForm" class="btn-secondary">Clear</button>
+  </form>
+</section>
+
+<section class="search-section">
+  <input type="text" id="searchAppt" placeholder="🔍 Search by patient or doctor...">
+</section>
+
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Patient</th><th>Doctor</th><th>Department</th>
+        <th>Date</th><th>Time</th><th>Problem</th><th>Status</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="apptTable"></tbody>
+  </table>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MediCare Hospital Management System. All Rights Reserved.</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+<script src="js/appointment.js"></script>
+</body>
+</html>

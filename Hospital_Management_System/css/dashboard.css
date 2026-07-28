@@ -1,0 +1,13 @@
+.dashboard-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 40px 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dashboard-table h2 {
+  color: var(--primary);
+  margin-bottom: 15px;
+}

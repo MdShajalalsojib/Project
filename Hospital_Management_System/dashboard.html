@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Dashboard - MediCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Medi<span>Care</span></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html" class="active">Dashboard</a></li>
+      <li><a href="patient.html">Patients</a></li>
+      <li><a href="doctor.html">Doctors</a></li>
+      <li><a href="appointment.html">Appointments</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<section class="dashboard-cards">
+  <div class="dash-card">
+    <h3 id="totalPatients">0</h3>
+    <p>Total Patients</p>
+  </div>
+  <div class="dash-card">
+    <h3 id="totalDoctors">0</h3>
+    <p>Total Doctors</p>
+  </div>
+  <div class="dash-card">
+    <h3 id="totalDepartments">10</h3>
+    <p>Departments</p>
+  </div>
+  <div class="dash-card">
+    <h3 id="totalAppointments">0</h3>
+    <p>Today's Appointments</p>
+  </div>
+</section>
+
+<section class="dashboard-table">
+  <h2>Recent Patients</h2>
+  <table>
+    <thead>
+      <tr><th>Name</th><th>Age</th><th>Disease</th><th>Phone</th></tr>
+    </thead>
+    <tbody id="recentPatientsTable"></tbody>
+  </table>
+</section>
+
+<section class="dashboard-table">
+  <h2>Recent Appointments</h2>
+  <table>
+    <thead>
+      <tr><th>Patient</th><th>Doctor</th><th>Date</th><th>Time</th></tr>
+    </thead>
+    <tbody id="recentAppointmentsTable"></tbody>
+  </table>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MediCare Hospital Management System. All Rights Reserved.</p>
+</footer>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+<script src="js/dashboard.js"></script>
+</body>
+</html>

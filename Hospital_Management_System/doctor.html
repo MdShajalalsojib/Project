@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Doctors - MediCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/doctor.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Medi<span>Care</span></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patient.html">Patients</a></li>
+      <li><a href="doctor.html" class="active">Doctors</a></li>
+      <li><a href="appointment.html">Appointments</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<section class="form-section">
+  <h2>Doctor Registration</h2>
+  <form id="doctorForm">
+    <input type="hidden" id="doctorId">
+    <div class="form-grid">
+      <input type="text" id="dName" placeholder="Doctor Name" required>
+      <select id="dDept" required>
+        <option value="">Department</option>
+        <option>Cardiology</option>
+        <option>Neurology</option>
+        <option>Dental</option>
+        <option>ICU</option>
+        <option>Emergency</option>
+        <option>General</option>
+      </select>
+      <input type="number" id="dExperience" placeholder="Experience (years)" required min="0">
+      <input type="email" id="dEmail" placeholder="Email" required>
+      <input type="tel" id="dPhone" placeholder="Phone Number" required>
+      <input type="text" id="dTime" placeholder="Available Time (e.g. 9AM-5PM)" required>
+    </div>
+    <button type="submit" class="btn-primary">Save Doctor</button>
+    <button type="button" id="resetDoctorForm" class="btn-secondary">Clear</button>
+  </form>
+</section>
+
+<section class="search-section">
+  <input type="text" id="searchDoctor" placeholder="🔍 Search doctor by name or department...">
+</section>
+
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Department</th><th>Experience</th>
+        <th>Email</th><th>Phone</th><th>Available</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="doctorTable"></tbody>
+  </table>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MediCare Hospital Management System. All Rights Reserved.</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+<script src="js/doctor.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MediCare Hospital Management System</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Medi<span>Care</span></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patient.html">Patients</a></li>
+      <li><a href="doctor.html">Doctors</a></li>
+      <li><a href="appointment.html">Appointments</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<section class="hero">
+  <h1>Welcome to MediCare Hospital</h1>
+  <p>"Quality Care, Trusted Service"</p>
+  <a href="dashboard.html" class="btn-primary">Go to Dashboard</a>
+</section>
+
+<section class="about">
+  <h2>About Our Hospital</h2>
+  <p>MediCare Hospital has been providing world-class healthcare services for over 20 years, combining modern technology with compassionate care.</p>
+</section>
+
+<section class="services">
+  <h2>Our Services</h2>
+  <div class="service-grid">
+    <div class="service-card">🫀 Cardiology</div>
+    <div class="service-card">🧠 Neurology</div>
+    <div class="service-card">🦷 Dental Care</div>
+    <div class="service-card">🚑 Emergency</div>
+    <div class="service-card">🛏️ ICU</div>
+    <div class="service-card">🧪 Laboratory</div>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="stat-card"><h3 class="counter" data-target="325">0</h3><p>Patients</p></div>
+  <div class="stat-card"><h3 class="counter" data-target="25">0</h3><p>Doctors</p></div>
+  <div class="stat-card"><h3 class="counter" data-target="10">0</h3><p>Departments</p></div>
+  <div class="stat-card"><h3 class="counter" data-target="18">0</h3><p>Today's Bookings</p></div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MediCare Hospital Management System. All Rights Reserved.</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

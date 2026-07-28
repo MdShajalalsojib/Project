@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Patients - MediCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/patient.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Medi<span>Care</span></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patient.html" class="active">Patients</a></li>
+      <li><a href="doctor.html">Doctors</a></li>
+      <li><a href="appointment.html">Appointments</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<section class="form-section">
+  <h2>Patient Registration</h2>
+  <form id="patientForm">
+    <input type="hidden" id="patientId">
+    <div class="form-grid">
+      <input type="text" id="pName" placeholder="Patient Name" required>
+      <input type="number" id="pAge" placeholder="Age" required min="0">
+      <select id="pGender" required>
+        <option value="">Gender</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+      <select id="pBlood" required>
+        <option value="">Blood Group</option>
+        <option>A+</option><option>A-</option>
+        <option>B+</option><option>B-</option>
+        <option>O+</option><option>O-</option>
+        <option>AB+</option><option>AB-</option>
+      </select>
+      <input type="tel" id="pPhone" placeholder="Phone Number" required pattern="[0-9]{10,15}">
+      <input type="text" id="pAddress" placeholder="Address" required>
+      <input type="text" id="pDisease" placeholder="Disease / Reason" required>
+    </div>
+    <button type="submit" class="btn-primary">Save Patient</button>
+    <button type="button" id="resetPatientForm" class="btn-secondary">Clear</button>
+  </form>
+</section>
+
+<section class="search-section">
+  <input type="text" id="searchPatient" placeholder="🔍 Search patient by name or phone...">
+</section>
+
+<section class="table-section">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th><th>Age</th><th>Gender</th><th>Blood</th>
+        <th>Phone</th><th>Address</th><th>Disease</th><th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="patientTable"></tbody>
+  </table>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MediCare Hospital Management System. All Rights Reserved.</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+<script src="js/patient.js"></script>
+</body>
+</html>

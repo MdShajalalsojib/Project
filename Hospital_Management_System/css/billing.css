@@ -1,0 +1,8 @@
+#billTotal { color: var(--primary); }
+
+@media print {
+  .navbar, .footer, .table-section, .theme-btn, #printBill, #resetBillForm, .toast {
+    display: none !important;
+  }
+  #printArea { box-shadow: none; }
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact - MediCare</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">Medi<span>Care</span></div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="dashboard.html">Dashboard</a></li>
+      <li><a href="patient.html">Patients</a></li>
+      <li><a href="doctor.html">Doctors</a></li>
+      <li><a href="appointment.html">Appointments</a></li>
+      <li><a href="department.html">Departments</a></li>
+      <li><a href="billing.html">Billing</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+  <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<section class="form-section">
+  <h2>Contact Us</h2>
+  <form id="contactForm">
+    <div class="form-grid">
+      <input type="text" id="cName" placeholder="Your Name" required>
+      <input type="email" id="cEmail" placeholder="Your Email" required>
+      <input type="text" id="cSubject" placeholder="Subject" required>
+      <textarea id="cMessage" placeholder="Message" required></textarea>
+    </div>
+    <button type="submit" class="btn-primary">Send Message</button>
+  </form>
+  <div class="contact-info">
+    <p>📍 123 Health Street, Dhaka</p>
+    <p>📞 +880 123 456 789</p>
+    <p>✉️ info@medicare.com</p>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>© 2026 MediCare Hospital Management System. All Rights Reserved.</p>
+</footer>
+
+<div id="toast" class="toast"></div>
+
+<script src="js/storage.js"></script>
+<script src="js/main.js"></script>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(e){
+  e.preventDefault();
+  showToast('Message sent successfully!');
+  this.reset();
+});
+</script>
+</body>
+</html>
