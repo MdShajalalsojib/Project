@@ -1,0 +1,1 @@
+![Smart Agriculture Explorer](img/output001.png)
