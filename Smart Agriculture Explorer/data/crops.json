@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "name": "Tomato",
+        "category": "Vegetable",
+        "soil": "Loamy",
+        "water": "Moderate",
+        "sunlight": "High",
+        "season": "Winter",
+        "image": "images/tomato.jpg",
+        "description": "Tomato is a commonly cultivated vegetable crop rich in vitamins."
+    },
+    {
+        "id": 2,
+        "name": "Rice",
+        "category": "Cereal",
+        "soil": "Clay",
+        "water": "High",
+        "sunlight": "High",
+        "season": "Monsoon",
+        "image": "images/rice.jpg",
+        "description": "Rice is an important cereal crop requiring sufficient water and warm climate."
+    },
+    {
+        "id": 3,
+        "name": "Wheat",
+        "category": "Cereal",
+        "soil": "Loamy",
+        "water": "Low",
+        "sunlight": "High",
+        "season": "Winter",
+        "image": "images/wheat.jpg",
+        "description": "Wheat is a staple cereal grown in cooler seasons with moderate rainfall."
+    },
+    {
+        "id": 4,
+        "name": "Potato",
+        "category": "Vegetable",
+        "soil": "Sandy",
+        "water": "Moderate",
+        "sunlight": "High",
+        "season": "Winter",
+        "image": "images/potato.jpg",
+        "description": "Potato thrives in well-drained sandy loam soil in cool weather."
+    },
+    {
+        "id": 5,
+        "name": "Mango",
+        "category": "Fruit",
+        "soil": "Loamy",
+        "water": "Low",
+        "sunlight": "High",
+        "season": "Summer",
+        "image": "images/mango.jpg",
+        "description": "Mango is a tropical fruit tree that prefers dry weather before flowering."
+    },
+    {
+        "id": 6,
+        "name": "Chickpea",
+        "category": "Pulse",
+        "soil": "Sandy",
+        "water": "Low",
+        "sunlight": "Moderate",
+        "season": "Winter",
+        "image": "images/chickpea.jpg",
+        "description": "Chickpea is a drought-tolerant pulse crop grown in the dry season."
+    },
+    {
+        "id": 7,
+        "name": "Cabbage",
+        "category": "Vegetable",
+        "soil": "Loamy",
+        "water": "Moderate",
+        "sunlight": "Moderate",
+        "season": "Winter",
+        "image": "images/cabbage.jpg",
+        "description": "Cabbage grows best in cool weather with rich, well-drained soil."
+    },
+    {
+        "id": 8,
+        "name": "Sugarcane",
+        "category": "Cereal",
+        "soil": "Clay",
+        "water": "High",
+        "sunlight": "High",
+        "season": "Summer",
+        "image": "images/sugarcane.jpg",
+        "description": "Sugarcane is a tall tropical grass requiring plenty of water and sunlight."
+    },
+    {
+        "id": 9,
+        "name": "Watermelon",
+        "category": "Fruit",
+        "soil": "Sandy",
+        "water": "Moderate",
+        "sunlight": "High",
+        "season": "Summer",
+        "image": "images/watermelon.jpg",
+        "description": "Watermelon grows well in sandy soil with warm temperatures."
+    },
+    {
+        "id": 10,
+        "name": "Lentil",
+        "category": "Pulse",
+        "soil": "Silty",
+        "water": "Low",
+        "sunlight": "Moderate",
+        "season": "Winter",
+        "image": "images/lentil.jpg",
+        "description": "Lentil is a nutrient-rich pulse that grows well in cool, dry conditions."
+    },
+    {
+        "id": 11,
+        "name": "Chili",
+        "category": "Vegetable",
+        "soil": "Loamy",
+        "water": "Moderate",
+        "sunlight": "High",
+        "season": "Monsoon",
+        "image": "images/chili.jpg",
+        "description": "Chili peppers grow well in warm climates with moderate watering."
+    },
+    {
+        "id": 12,
+        "name": "Banana",
+        "category": "Fruit",
+        "soil": "Silty",
+        "water": "High",
+        "sunlight": "High",
+        "season": "Monsoon",
+        "image": "images/banana.jpg",
+        "description": "Banana requires humid conditions and consistent moisture to thrive."
+    }
+]

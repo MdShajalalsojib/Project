@@ -1,0 +1,364 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+    color: #263238;
+    background: #fafafa;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #2e7d32;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    font-weight: 600;
+    color: #37474f;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #2e7d32;
+}
+
+.banner {
+    background: linear-gradient(135deg, #2e7d32, #66bb6a);
+    color: white;
+    text-align: center;
+    padding: 4rem 1rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(45deg,
+            rgba(255, 255, 255, 0.05) 0px,
+            rgba(255, 255, 255, 0.05) 10px,
+            transparent 10px,
+            transparent 20px);
+}
+
+.banner-overlay {
+    position: relative;
+    z-index: 2;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.tagline {
+    font-size: 1.3rem;
+    font-style: italic;
+    margin: 0.5rem 0 1.5rem;
+    opacity: 0.95;
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.search-box input {
+    padding: 0.7rem 1rem;
+    width: 280px;
+    max-width: 80vw;
+    border: none;
+    border-radius: 30px 0 0 30px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.search-box button {
+    padding: 0.7rem 1.3rem;
+    border: none;
+    border-radius: 0 30px 30px 0;
+    background: #1b5e20;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background: #163f18;
+}
+
+.cta-btn {
+    display: inline-block;
+    background: white;
+    color: #2e7d32;
+    font-weight: 700;
+    padding: 0.7rem 1.8rem;
+    border-radius: 30px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.stat-cards {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2.5rem;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+.section {
+    padding: 3rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.alt-bg {
+    background: #f1f8e9;
+    border-radius: 12px;
+}
+
+.section h2 {
+    text-align: center;
+    color: #2e7d32;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.category-filters,
+.soil-filters,
+.water-filters,
+.season-filters {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+}
+
+.filter-btn,
+.soil-btn,
+.water-btn,
+.season-btn {
+    padding: 0.5rem 1.1rem;
+    border: 2px solid #2e7d32;
+    background: white;
+    color: #2e7d32;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover,
+.soil-btn:hover,
+.water-btn:hover,
+.season-btn:hover,
+.filter-btn.active {
+    background: #2e7d32;
+    color: white;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+}
+
+.crop-card {
+    background: white;
+    border-radius: 12px;
+    padding: 1.2rem;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s, box-shadow 0.2s;
+    border-top: 5px solid #66bb6a;
+}
+
+.crop-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+}
+
+.crop-card h3 {
+    color: #1b5e20;
+    margin-bottom: 0.4rem;
+}
+
+.crop-card table {
+    width: 100%;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.crop-card table td {
+    padding: 0.15rem 0;
+}
+
+.crop-card table td:first-child {
+    font-weight: 600;
+    color: #455a64;
+    width: 45%;
+}
+
+.loading-msg,
+.hint-msg,
+.no-results {
+    text-align: center;
+    color: #78909c;
+    grid-column: 1 / -1;
+    padding: 1rem;
+}
+
+.site-footer {
+    background: #1b1f1c;
+    color: #cfd8dc;
+    text-align: center;
+    padding: 2rem 1rem;
+    margin-top: 2rem;
+}
+
+.footer-content p {
+    margin: 0.2rem 0;
+}
+
+.footer-content strong {
+    color: #a5d6a7;
+}
+
+.footer-year {
+    font-size: 0.85rem;
+    color: #90a4ae;
+}
+
+/* ===== Crop card image ===== */
+.crop-img-wrap {
+    width: 100%;
+    height: 140px;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.8rem;
+    background: #e8f5e9;
+}
+
+.crop-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.crop-img-fallback {
+    width: 100%;
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    background: #e8f5e9;
+    border-radius: 8px;
+}
+
+/* ===== About section ===== */
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.about-text {
+    flex: 1 1 320px;
+    max-width: 500px;
+    color: #455a64;
+}
+
+.about-features {
+    flex: 1 1 280px;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.about-feature {
+    background: white;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid #66bb6a;
+}
+
+.about-feature .icon {
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.about-feature .label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #2e7d32;
+}
+
+@media (max-width: 600px) {
+    .site-header {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .banner h1 {
+        font-size: 2.2rem;
+    }
+}

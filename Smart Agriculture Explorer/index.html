@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgroGuide — Smart Agriculture Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+        <div class="logo">🌾 AgroGuide</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#crops">Crops</a></li>
+                <li><a href="#soil">Soil Guide</a></li>
+                <li><a href="#irrigation">Irrigation</a></li>
+                <li><a href="#seasonal">Seasonal</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner" id="home">
+        <div class="banner-overlay">
+            <h1>Smart Agriculture</h1>
+            <p class="tagline">Explore. Learn. Grow.</p>
+
+            <div class="search-box">
+                <input type="text" id="cropSearchInput" placeholder="🔍 Search for a crop...">
+                <button id="searchBtn">Search</button>
+            </div>
+
+            <a href="#crops" class="cta-btn">Explore Crops</a>
+        </div>
+
+        <div class="stat-cards">
+            <div class="stat-card">🌱<br>Crops</div>
+            <div class="stat-card">💧<br>Irrigation</div>
+            <div class="stat-card">🌍<br>Soil Guide</div>
+            <div class="stat-card">☀️<br>Seasons</div>
+        </div>
+    </section>
+
+    <section class="section" id="crops">
+        <h2>🌱 Crop Explorer</h2>
+        <div class="category-filters">
+            <button class="filter-btn active" data-filter="All">All</button>
+            <button class="filter-btn" data-filter="Cereal">🌾 Cereals</button>
+            <button class="filter-btn" data-filter="Vegetable">🥬 Vegetables</button>
+            <button class="filter-btn" data-filter="Fruit">🍎 Fruits</button>
+            <button class="filter-btn" data-filter="Pulse">🌱 Pulses</button>
+        </div>
+        <div id="cropResults" class="card-grid">
+            <p class="loading-msg">Loading crops...</p>
+        </div>
+    </section>
+
+    <section class="section alt-bg" id="soil">
+        <h2>🌍 Soil Guide</h2>
+        <div class="soil-filters">
+            <button class="soil-btn" data-soil="Loamy">Loamy</button>
+            <button class="soil-btn" data-soil="Clay">Clay</button>
+            <button class="soil-btn" data-soil="Sandy">Sandy</button>
+            <button class="soil-btn" data-soil="Silty">Silty</button>
+        </div>
+        <div id="soilResults" class="card-grid">
+            <p class="hint-msg">Select a soil type to see suitable crops.</p>
+        </div>
+    </section>
+
+    <section class="section" id="irrigation">
+        <h2>💧 Irrigation Guide</h2>
+        <div class="water-filters">
+            <button class="water-btn" data-water="Low">💧 Low</button>
+            <button class="water-btn" data-water="Moderate">💧💧 Moderate</button>
+            <button class="water-btn" data-water="High">💧💧💧 High</button>
+        </div>
+        <div id="waterResults" class="card-grid">
+            <p class="hint-msg">Select a water requirement to filter crops.</p>
+        </div>
+    </section>
+
+    <section class="section alt-bg" id="seasonal">
+        <h2>📅 Seasonal Crop Explorer</h2>
+        <div class="season-filters">
+            <button class="season-btn" data-season="Summer">☀️ Summer</button>
+            <button class="season-btn" data-season="Monsoon">🌧️ Monsoon</button>
+            <button class="season-btn" data-season="Winter">❄️ Winter</button>
+        </div>
+        <div id="seasonResults" class="card-grid">
+            <p class="hint-msg">Select a season to view its crops.</p>
+        </div>
+    </section>
+
+     <section class="section" id="about">
+  <h2>ℹ️ About AgroGuide</h2>
+  <div class="about-content">
+    <div class="about-text">
+      <p>
+        <strong>AgroGuide</strong> is a Smart Agriculture Information &amp; Crop
+        Explorer built for a Web Programming Lab project. It helps users explore
+        crops, soil types, irrigation needs, and seasonal planting information
+        through a clean, dashboard-style interface.
+      </p>
+      <p style="margin-top:0.8rem;">
+        Crop data is loaded dynamically from a JSON file using AJAX (Fetch API),
+        then rendered into the page through DOM manipulation — with live search
+        and filtering by category, soil, water requirement, and season.
+      </p>
+    </div>
+    <div class="about-features">
+      <div class="about-feature"><span class="icon">🌐</span><span class="label">HTML5 &amp; CSS3</span></div>
+      <div class="about-feature"><span class="icon">⚙️</span><span class="label">JavaScript &amp; DOM</span></div>
+      <div class="about-feature"><span class="icon">📦</span><span class="label">JSON Data</span></div>
+      <div class="about-feature"><span class="icon">🔄</span><span class="label">AJAX / Fetch</span></div>
+    </div>
+  </div>
+</section>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            <p>🌾 <strong>AgroGuide</strong> — Smart Agriculture Explorer</p>
+            <p>Web Programming Lab Project &middot; Built with HTML, CSS, JavaScript, JSON &amp; AJAX</p>
+            <p class="footer-year">&copy; <span id="year"></span> AgroGuide. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
