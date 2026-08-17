@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Library Hub</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">📚 LIBRARY HUB</div>
+  <nav>
+    <a href="#" data-section="home" class="nav-link active">Home</a>
+    <a href="#" data-section="browse" class="nav-link">Books</a>
+    <a href="#" data-section="favorites" class="nav-link">Favorites</a>
+    <a href="#" data-section="membership" class="nav-link">Membership</a>
+  </nav>
+</header>
+
+<!-- HOME -->
+<section id="home" class="page active">
+  <div class="hero">
+    <h1>Discover Your Next Book</h1>
+    <p>Search thousands of books from our library</p>
+    <div class="search-bar">
+      <input type="text" id="homeSearchInput" placeholder="Search books, authors...">
+      <button id="homeSearchBtn">🔎 Search</button>
+    </div>
+    <div class="hero-buttons">
+      <button onclick="goToSection('browse')">Browse Books</button>
+      <button onclick="showPopular()">Popular Books</button>
+    </div>
+  </div>
+
+  <h2 class="section-title">Popular Categories</h2>
+  <div class="categories" id="categoryList"></div>
+
+  <h2 class="section-title">Library Statistics</h2>
+  <div class="stats" id="statsBox"></div>
+</section>
+
+<!-- BROWSE -->
+<section id="browse" class="page">
+  <h2 class="section-title">Browse Books</h2>
+  <div class="filters">
+    <input type="text" id="browseSearchInput" placeholder="Search title or author...">
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+    </select>
+    <select id="sortFilter">
+      <option value="title">Sort by Title</option>
+      <option value="year">Sort by Year</option>
+    </select>
+  </div>
+  <div class="book-grid" id="bookGrid"></div>
+</section>
+
+<!-- FAVORITES -->
+<section id="favorites" class="page">
+  <h2 class="section-title">My Favorites</h2>
+  <div class="book-grid" id="favoritesGrid"></div>
+  <p id="noFavoritesMsg" style="display:none;">No favorites yet. Add some books!</p>
+</section>
+
+<!-- MEMBERSHIP -->
+<section id="membership" class="page">
+  <h2 class="section-title">Library Membership</h2>
+  <form id="membershipForm" class="membership-form">
+    <label>Full Name:
+      <input type="text" id="fullName">
+    </label>
+    <label>Email:
+      <input type="text" id="email">
+    </label>
+    <label>Phone:
+      <input type="text" id="phone">
+    </label>
+    <label>Department:
+      <select id="department">
+        <option>CSE</option>
+        <option>EEE</option>
+        <option>BBA</option>
+        <option>Other</option>
+      </select>
+    </label>
+    <label>Gender:
+      <input type="radio" name="gender" value="Male"> Male
+      <input type="radio" name="gender" value="Female"> Female
+    </label>
+    <label>Membership Type:
+      <input type="radio" name="memType" value="Student"> Student
+      <input type="radio" name="memType" value="General"> General
+    </label>
+    <label>Date of Birth:
+      <input type="date" id="dob">
+    </label>
+    <label>Address:
+      <textarea id="address"></textarea>
+    </label>
+    <label class="checkbox-label">
+      <input type="checkbox" id="agree"> I agree to the library rules
+    </label>
+    <button type="submit">Register</button>
+    <p id="formMessage"></p>
+  </form>
+</section>
+
+<!-- MODAL -->
+<div id="detailsModal" class="modal hidden">
+  <div class="modal-content" id="modalContent"></div>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

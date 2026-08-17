@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "title": "JavaScript Basics",
+        "author": "John Smith",
+        "category": "Programming",
+        "year": 2024,
+        "isbn": "978100000001",
+        "status": "Available",
+        "description": "An introductory book about JavaScript fundamentals, variables, and functions.",
+        "image": "https://picsum.photos/seed/book1/300/200"
+    },
+    {
+        "id": 2,
+        "title": "HTML and CSS",
+        "author": "David Brown",
+        "category": "Web Development",
+        "year": 2023,
+        "isbn": "978100000002",
+        "status": "Borrowed",
+        "description": "A practical introduction to HTML and CSS for beginners.",
+        "image": "https://picsum.photos/seed/book2/300/200"
+    },
+    {
+        "id": 3,
+        "title": "Clean Code",
+        "author": "Robert Martin",
+        "category": "Programming",
+        "year": 2020,
+        "isbn": "978100000003",
+        "status": "Available",
+        "description": "A handbook of agile software craftsmanship.",
+        "image": "https://picsum.photos/seed/book3/300/200"
+    },
+    {
+        "id": 4,
+        "title": "The Alchemist",
+        "author": "Paulo Coelho",
+        "category": "Novel",
+        "year": 1988,
+        "isbn": "978100000004",
+        "status": "Borrowed",
+        "description": "A philosophical novel about following your dreams.",
+        "image": "https://picsum.photos/seed/book4/300/200"
+    },
+    {
+        "id": 5,
+        "title": "A Brief History of Time",
+        "author": "Stephen Hawking",
+        "category": "Science",
+        "year": 1988,
+        "isbn": "978100000005",
+        "status": "Available",
+        "description": "An exploration of cosmology and the nature of the universe.",
+        "image": "https://picsum.photos/seed/book5/300/200"
+    },
+    {
+        "id": 6,
+        "title": "Sapiens",
+        "author": "Yuval Noah Harari",
+        "category": "History",
+        "year": 2011,
+        "isbn": "978100000006",
+        "status": "Available",
+        "description": "A brief history of humankind.",
+        "image": "https://picsum.photos/seed/book6/300/200"
+    },
+    {
+        "id": 7,
+        "title": "Modern JavaScript",
+        "author": "David Lee",
+        "category": "Programming",
+        "year": 2022,
+        "isbn": "978100000007",
+        "status": "Borrowed",
+        "description": "Deep dive into ES6+ features and async programming.",
+        "image": "https://picsum.photos/seed/book7/300/200"
+    },
+    {
+        "id": 8,
+        "title": "1984",
+        "author": "George Orwell",
+        "category": "Novel",
+        "year": 1949,
+        "isbn": "978100000008",
+        "status": "Available",
+        "description": "A dystopian novel about totalitarianism and surveillance.",
+        "image": "https://picsum.photos/seed/book8/300/200"
+    },
+    {
+        "id": 9,
+        "title": "The Selfish Gene",
+        "author": "Richard Dawkins",
+        "category": "Science",
+        "year": 1976,
+        "isbn": "978100000009",
+        "status": "Available",
+        "description": "A gene-centered view of evolution.",
+        "image": "https://picsum.photos/seed/book9/300/200"
+    },
+    {
+        "id": 10,
+        "title": "Guns, Germs, and Steel",
+        "author": "Jared Diamond",
+        "category": "History",
+        "year": 1997,
+        "isbn": "978100000010",
+        "status": "Borrowed",
+        "description": "How geography shaped the fates of human societies.",
+        "image": "https://picsum.photos/seed/book10/300/200"
+    },
+    {
+        "id": 11,
+        "title": "Eloquent JavaScript",
+        "author": "Marijn Haverbeke",
+        "category": "Programming",
+        "year": 2018,
+        "isbn": "978100000011",
+        "status": "Available",
+        "description": "A modern introduction to programming with JavaScript.",
+        "image": "https://picsum.photos/seed/book11/300/200"
+    },
+    {
+        "id": 12,
+        "title": "To Kill a Mockingbird",
+        "author": "Harper Lee",
+        "category": "Novel",
+        "year": 1960,
+        "isbn": "978100000012",
+        "status": "Available",
+        "description": "A story of racial injustice in the American South.",
+        "image": "https://picsum.photos/seed/book12/300/200"
+    }
+]

@@ -1,0 +1,313 @@
+ * {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     font-family: 'Segoe UI', sans-serif;
+ }
+
+ body {
+     background: #f4f6f8;
+     color: #222;
+ }
+
+ .navbar {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     background: #1e3a5f;
+     color: white;
+     padding: 15px 30px;
+ }
+
+ .navbar .logo {
+     font-size: 1.3em;
+     font-weight: bold;
+ }
+
+ .navbar nav a {
+     color: white;
+     text-decoration: none;
+     margin-left: 20px;
+     font-weight: 500;
+ }
+
+ .navbar nav a.active,
+ .navbar nav a:hover {
+     color: #ffcc70;
+ }
+
+ .page {
+     display: none;
+     padding: 30px;
+     max-width: 1100px;
+     margin: auto;
+ }
+
+ .page.active {
+     display: block;
+ }
+
+ .hero {
+     text-align: center;
+     padding: 60px 20px;
+     background:
+         linear-gradient(135deg, rgba(30, 58, 95, 0.85), rgba(58, 110, 165, 0.85)),
+         url('https://picsum.photos/seed/librarybanner/1200/400') center/cover no-repeat;
+     color: white;
+     border-radius: 12px;
+ }
+
+ .hero h1 {
+     font-size: 2.2em;
+     margin-bottom: 10px;
+ }
+
+ .search-bar {
+     margin: 25px auto;
+     display: flex;
+     max-width: 500px;
+ }
+
+ .search-bar input {
+     flex: 1;
+     padding: 12px;
+     border: none;
+     border-radius: 6px 0 0 6px;
+ }
+
+ .search-bar button {
+     padding: 12px 18px;
+     border: none;
+     background: #ffcc70;
+     border-radius: 0 6px 6px 0;
+     cursor: pointer;
+ }
+
+ .hero-buttons button {
+     margin: 10px;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 6px;
+     background: white;
+     color: #1e3a5f;
+     font-weight: bold;
+     cursor: pointer;
+ }
+
+ .section-title {
+     margin: 30px 0 15px;
+     font-size: 1.4em;
+     color: #1e3a5f;
+ }
+
+ .categories {
+     display: flex;
+     gap: 15px;
+     flex-wrap: wrap;
+ }
+
+ .category-card {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+     flex: 1;
+     min-width: 120px;
+     text-align: center;
+     cursor: pointer;
+     transition: 0.2s;
+ }
+
+ .category-card:hover {
+     transform: translateY(-4px);
+ }
+
+ .stats {
+     display: flex;
+     gap: 20px;
+     flex-wrap: wrap;
+ }
+
+ .stat-box {
+     background: white;
+     padding: 20px;
+     border-radius: 10px;
+     flex: 1;
+     min-width: 140px;
+     text-align: center;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .stat-box h3 {
+     font-size: 1.8em;
+     color: #1e3a5f;
+ }
+
+ .filters {
+     display: flex;
+     gap: 10px;
+     margin-bottom: 20px;
+     flex-wrap: wrap;
+ }
+
+ .filters input,
+ .filters select {
+     padding: 10px;
+     border-radius: 6px;
+     border: 1px solid #ccc;
+ }
+
+ .filters input {
+     flex: 1;
+     min-width: 200px;
+ }
+
+ .book-grid {
+     display: grid;
+     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+     gap: 20px;
+ }
+
+ .book-card {
+     background: white;
+     border-radius: 10px;
+     padding: 15px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .book-card h4 {
+     color: #1e3a5f;
+     margin-bottom: 5px;
+ }
+
+ .book-card p {
+     font-size: 0.9em;
+     margin: 3px 0;
+     color: #555;
+ }
+
+ .status.available {
+     color: green;
+     font-weight: bold;
+ }
+
+ .status.borrowed {
+     color: #c0392b;
+     font-weight: bold;
+ }
+
+ .book-card button {
+     margin-top: 10px;
+     padding: 8px 12px;
+     border: none;
+     border-radius: 6px;
+     background: #1e3a5f;
+     color: white;
+     cursor: pointer;
+     margin-right: 5px;
+ }
+
+ .fav-btn {
+     background: none !important;
+     border: 1px solid #1e3a5f !important;
+     color: #1e3a5f !important;
+ }
+
+ .book-cover {
+     width: 100%;
+     height: 160px;
+     object-fit: cover;
+     border-radius: 8px;
+     margin-bottom: 10px;
+ }
+
+ .modal-cover {
+     width: 100%;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 8px;
+     margin-bottom: 10px;
+ }
+
+ .membership-form {
+     display: flex;
+     flex-direction: column;
+     gap: 15px;
+     max-width: 500px;
+     background: white;
+     padding: 25px;
+     border-radius: 10px;
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .membership-form input[type=text],
+ .membership-form input[type=date],
+ .membership-form select,
+ .membership-form textarea {
+     width: 100%;
+     padding: 8px;
+     margin-top: 5px;
+     border: 1px solid #ccc;
+     border-radius: 6px;
+ }
+
+ .checkbox-label {
+     display: flex;
+     align-items: center;
+     gap: 8px;
+ }
+
+ .membership-form button {
+     padding: 12px;
+     background: #1e3a5f;
+     color: white;
+     border: none;
+     border-radius: 6px;
+     cursor: pointer;
+ }
+
+ #formMessage {
+     font-weight: bold;
+ }
+
+ .modal {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: rgba(0, 0, 0, 0.5);
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .modal.hidden {
+     display: none;
+ }
+
+ .modal-content {
+     background: white;
+     padding: 25px;
+     border-radius: 10px;
+     max-width: 400px;
+     width: 90%;
+ }
+
+ .modal-content button {
+     margin-top: 15px;
+     margin-right: 10px;
+     padding: 8px 14px;
+     border: none;
+     border-radius: 6px;
+     background: #1e3a5f;
+     color: white;
+     cursor: pointer;
+ }
+
+ @media (max-width: 600px) {
+     .navbar {
+         flex-direction: column;
+         gap: 10px;
+     }
+ }
