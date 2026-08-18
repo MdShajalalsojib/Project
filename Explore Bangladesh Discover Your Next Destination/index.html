@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Explorer — Discover Bangladesh</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="brand"><span class="mark">🧭</span> Travel Explorer</div>
+            <div class="nav-links">
+                <a href="#destinations">Destinations</a>
+                <a href="#categories">Categories</a>
+                <a href="#planner">Planner</a>
+                <a href="#favorites">Favorites</a>
+            </div>
+            <div class="fav-pill">♡ Favorites <span id="favCount">0</span></div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div>
+            <span class="hero-eyebrow">Explore Bangladesh</span>
+            <h1>Find your next <em>escape</em>, from tea hills to tidal shores.</h1>
+            <p class="sub">Search, filter and compare destinations across Bangladesh — beaches, hills, forests and
+                heritage sites — with live budget and season filters.</p>
+            <div class="search-box">
+                <span>🔍</span>
+                <input type="text" id="heroSearch" placeholder="Try 'Cox's Bazar', 'Sajek', 'waterfall'…">
+                <button id="heroSearchBtn">Search</button>
+            </div>
+        </div>
+        <div class="hero-art">
+            <svg viewBox="0 0 400 340" preserveAspectRatio="none">
+                <defs>
+                    <linearGradient id="hillGrad" x1="0" y1="0" x2="0" y2="1">
+                        <stop offset="0%" stop-color="#3E8E82" />
+                        <stop offset="100%" stop-color="#153F3A" />
+                    </linearGradient>
+                </defs>
+                <path d="M0,180 C80,120 160,220 240,150 C300,100 350,160 400,120 L400,340 L0,340 Z"
+                    fill="url(#hillGrad)" opacity="0.9" />
+                <path d="M0,240 C90,200 170,260 260,210 C320,180 360,230 400,200 L400,340 L0,340 Z" fill="#0F2E2B" />
+                <circle cx="330" cy="60" r="34" fill="#E7A93E" opacity="0.85" />
+                <path d="M60,300 Q90,285 120,300 T180,300" stroke="#E7A93E" stroke-width="2" fill="none"
+                    opacity="0.5" />
+            </svg>
+            <div class="hero-stat">
+                <div><strong id="statTotal">0</strong><span>Destinations</span></div>
+                <div><strong id="statCats">0</strong><span>Categories</span></div>
+                <div><strong>4.7</strong><span>Avg Rating</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="categories">
+        <div class="section-head">
+            <div><span class="eyebrow">Browse</span>
+                <h2>Explore by category</h2>
+            </div>
+        </div>
+        <div class="cat-grid" id="catGrid"></div>
+    </section>
+
+    <section id="destinations">
+        <div class="section-head">
+            <div><span class="eyebrow">All places</span>
+                <h2>Destinations</h2>
+            </div>
+            <div class="result-count"><span id="resultCount">0</span> places found</div>
+        </div>
+
+        <div class="filters">
+            <div class="chip-group" id="categoryChips"></div>
+            <div class="filter-divider"></div>
+            <div class="chip-group" id="budgetChips"></div>
+            <div class="filter-divider"></div>
+            <div class="chip-group" id="seasonChips"></div>
+        </div>
+
+        <div class="grid" id="cardGrid"></div>
+    </section>
+
+    <section id="favorites">
+        <div class="section-head">
+            <div><span class="eyebrow">Saved</span>
+                <h2>My Favorites</h2>
+            </div>
+            <div class="result-count"><span id="favResultCount">0</span> saved</div>
+        </div>
+        <div class="grid" id="favGrid"></div>
+    </section>
+
+    <section id="planner">
+        <div class="section-head">
+            <div><span class="eyebrow">Get planning</span>
+                <h2>Plan your trip</h2>
+            </div>
+        </div>
+        <div class="planner">
+            <div class="planner-form">
+                <div class="field">
+                    <label>Destination</label>
+                    <select id="planDest"></select>
+                </div>
+                <div class="field">
+                    <label>Number of days</label>
+                    <input type="number" id="planDays" value="3" min="1" max="21">
+                </div>
+                <div class="field">
+                    <label>Travel type</label>
+                    <div class="radio-row">
+                        <label><input type="radio" name="travelType" value="Solo" checked> Solo</label>
+                        <label><input type="radio" name="travelType" value="Family"> Family</label>
+                        <label><input type="radio" name="travelType" value="Friends"> Friends</label>
+                    </div>
+                </div>
+                <button class="plan-btn" id="planBtn">Create plan</button>
+            </div>
+            <div class="plan-result" id="planResult">
+                <p class="plan-placeholder">Fill in the form and create a plan to see an estimated budget and trip
+                    summary here.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal">
+            <div class="modal-media" id="modalMedia">
+                <button class="close-btn" id="modalCloseX">✕</button>
+            </div>
+            <div class="modal-body">
+                <h3 id="modalName"></h3>
+                <p class="modal-loc" id="modalLoc"></p>
+                <div class="modal-grid">
+                    <div class="modal-stat"><span>Category</span><strong id="modalCat"></strong></div>
+                    <div class="modal-stat"><span>Rating</span><strong id="modalRating"></strong></div>
+                    <div class="modal-stat"><span>Best season</span><strong id="modalSeason"></strong></div>
+                    <div class="modal-stat"><span>Est. cost</span><strong id="modalCost"></strong></div>
+                </div>
+                <p class="desc" id="modalDesc"></p>
+                <div class="modal-actions">
+                    <button class="btn-fav" id="modalFavBtn">♡ Add to Favorites</button>
+                    <button class="btn-close" id="modalCloseBtn">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <div class="brand" style="margin-bottom:10px;">🧭 Travel Explorer</div>
+                <p>An AJAX-style, JSON-driven guide to Bangladesh's beaches, hills, forests and heritage sites — search,
+                    filter and plan without ever reloading the page.</p>
+            </div>
+            <div>
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="#destinations">All destinations</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                    <li><a href="#favorites">Favorites</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Plan</h4>
+                <ul>
+                    <li><a href="#planner">Trip planner</a></li>
+                    <li><a href="#">Budget guide</a></li>
+                    <li><a href="#">Best seasons</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>About</h4>
+                <ul>
+                    <li><a href="#">Web Programming Lab Project</a></li>
+                    <li><a href="#">HTML · CSS · JS · DOM · JSON</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">© 2026 Travel Explorer — built for exploring Bangladesh, one destination at a time.
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
